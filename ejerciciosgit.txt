@@ -1,0 +1,153 @@
+Ejercicios de creación y
+actualización de repositorios
+
+Ejercicio 1
+Configurar Git definiendo el nombre del usuario, el correo
+electrónico y activar el coloreado de la salida. Mostrar la
+configuración final.
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~
+$ git config --global user.name Maria Chaparro
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~
+$ git config --global user.email mchaparrocaballeroa706@linkiafp.online
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~
+$ git config --global color.ui auto
+
+Ejercicio 2
+Crear un repositorio nuevo con el nombre libro y mostrar su
+contenido.
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~/git
+$ mkdir libro
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~/git
+$ cd libro
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~/git/libro
+$ git init
+Initialized empty Git repository in C:/Users/EQ4205/git/libro/.git/
+--------------------------------------------------------------------------------------------------------------------------
+Ejercicio 3
+1. Comprobar el estado del repositorio.
+2. Crear un fichero indice.txt con el siguiente contenido:
+Capítulo 1: Introducción a Git
+Capítulo 2: Flujo de trabajo básico
+Capítulo 3: Repositorios remotos
+3. Comprobar de nuevo el estado del repositorio.
+4. Añadir el fichero a la zona de intercambio temporal.
+5. Volver a comprobar una vez más el estado del repositorio
+
+EQ4205@DESKTOP-EHS0JB7 MINGW64 ~/git/libro (master)
+$ git status libro
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo > indice.txt
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ dir
+indice.txt
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo. Capítulo 1: Introducción a Git >> indice.txt
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo "Capitulo 2: Flujo de Trabajo básico" >> indice.txt
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo "Capitulo 3: Repositorios Remotos" >> indice.txt
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ git status
+On branch master
+git status
+git add indice.txt
+git status
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        indice.txt
+
+-------------------------------------------------------------------------------------------------------------------------
+Ejercicio 4
+Realizar un commit de los últimos cambios con el mensaje
+“Añadido índice del libro.” y ver el estado del repositorio.
+git commit -m "Añadido índice del libro."
+git status
+------------------------------------------------------------------------------------------------------------------------
+Ejercicio 5
+1. Cambiar el fichero indice.txt para que contenga lo siguiente:
+Capítulo 1: Introducción a Git
+Capítulo 2: Flujo de trabajo básico
+Capítulo 3: Gestión de ramas
+Capítulo 4: Repositorios remotos
+
+echo. "Capítulo 3: Gestión de ramas" >> indice.txt
+
+2. Mostrar los cambios con respecto a la última versión
+guardada en el repositorio.
+git diff
+git add indice.txt
+3. Hacer un commit de los cambios con el mensaje “Añadido
+capítulo 3 sobre gestión de ramas”.
+git commit -m "Añadido capítulo 3 sobre gestión de ramas"
+---------------------------------------------------------------------------------------------------------------------------
+Ejercicio 6
+1. Mostrar los cambios de la última versión del repositorio con
+respecto a la anterior.
+
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ git show
+commit 6a24eb3d53599e62faf7412794f2ecf5620d060d (HEAD -> master)
+Author: Maria <mchaparrocaballeroa706@linkiafp.online>
+Date:   Wed Jan 10 13:23:51 2024 +0100
+
+    Añadido capítulo 3 sobre gestión de ramas
+
+diff --git a/git b/git
+new file mode 100644
+index 0000000..e69de29
+diff --git a/indice.txt b/indice.txt
+index a9630f1..3c4c2a7 100644
+--- a/indice.txt
++++ b/indice.txt
+@@ -1,4 +1,4 @@
+-Capitulo 1: Introducción a Git
+-Capitulo 2: Flujo de Trabajo básico
+-Capitulo 3: Repositorios Remotos
+-
++Capítulo 1: Introducción a Git
++Capítulo 2: Flujo de trabajo básico
++Capítulo 3: Gestión de ramas
++Capítulo 4: Repositorios remotos
+\ No newline at end of file
+
+2. Cambiar el mensaje del último commit por “Añadido capítulo 3 sobre gestión de ramas al índice.”
+
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ git commgit commit --amend -m "Añadido capítulo 3 sobre gestión de ramas al índice."
+[master 67bbe6a] Añadido capítulo 3 sobre gestión de ramas al índice.
+ Date: Wed Jan 10 13:23:51 2024 +0100
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+ create mode 100644 git
+
+
+3. Volver a mostrar los últimos cambios del repositorio
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ git show
+commit 67bbe6a332d6733748a620cf13cf5893f2385c5e (HEAD -> master)
+Author: Maria <mchaparrocaballeroa706@linkiafp.online>
+Date:   Wed Jan 10 13:23:51 2024 +0100
+
+    Añadido capítulo 3 sobre gestión de ramas al índice.
+
+diff --git a/git b/git
+new file mode 100644
+index 0000000..e69de29
+diff --git a/indice.txt b/indice.txt
+index a9630f1..3c4c2a7 100644
+--- a/indice.txt
++++ b/indice.txt
+@@ -1,4 +1,4 @@
+-Capitulo 1: Introducción a Git
+-Capitulo 2: Flujo de Trabajo básico
+-Capitulo 3: Repositorios Remotos
+-
++Capítulo 1: Introducción a Git
++Capítulo 2: Flujo de trabajo básico
++Capítulo 3: Gestión de ramas
++Capítulo 4: Repositorios remotos
+\ No newline at end of file
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $
