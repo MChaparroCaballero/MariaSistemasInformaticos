@@ -58,7 +58,7 @@ git commit -m "Añadido capítulo 2."
 4. Mostrar las diferencias entre la última versión y dos versiones
 anteriores.
 
-git diff HEAD^^..HEAD
+git diff 
 
 Ejercicio 3
 1. Crear el fichero capitulo3.txt en la carpeta capitulos con el
@@ -84,7 +84,7 @@ git commit -m "Añadido capítulo 3"
 4. Mostrar las diferencias entre la primera y la última versión del
 repositorio.
 git log
-git diff &lt;codigo hash de la primera version>..HEAD
+git diff HEAD^^..HEAD
 
 Ejercicio 4
 1. Añadir al final del fichero indice.txt la siguiente línea:
