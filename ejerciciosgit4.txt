@@ -1,0 +1,64 @@
+EJERCICIOS DE
+REPOSITORIOS REMOTOS
+Ten un clon del repositorio remoto https://github.com/asalber/libro-git
+mediante la siguiente secuencia de comandos:
+> git clone
+https://github.com/asalber/libro-git.git
+> cd libro-git
+> git reset --hard cb1e4
+> git remote remove origin
+Ejercicio 1
+1. Crear un nuevo repositorio público en GitHub con el nombre
+libro-git.
+2. Añadirlo al repositorio local del libro.
+3. Mostrar todos los repositorios remotos configurados.
+
+cd git
+cd libro
+git clone https://github.com/MChaparroCaballero/libro-git.git
+git remote -v
+
+Ejercicio 2
+1. Añadir los cambios del repositorio local al repositorio remoto de
+GitHub.
+2. Acceder a GitHub y comprobar que se han subido los cambios
+mostrando el historial de versiones.
+git add .
+git commit -m "añadiendo cambios"
+git push
+
+Ejercicio 3
+1. Colaborar en el repositorio remoto libro-git de otro usuario.
+2. Clonar su repositorio libro-git.
+3. Añadir el fichero autores.txt que contenga el nombre del
+usuario y su correo electrónico.
+4. Añadir los cambios a la zona de intercambio temporal.
+5. Hacer un commit con el mensaje “Añadido autor.”
+6. Subir los cambios al repositorio remoto.
+
+git clone https://github.com/sebascedano/libro-git-1.git
+git remote add upstream
+git branch MariaChaparro
+git checkout MariaChaparro
+echo. "Maria Chaparro mchaparrocaballeroa706@linkiafp.online" > autores.txt
+
+Ejercicio 4
+1. Hacer una bifurcación del repositorio remoto
+asalber/libro-git en GitHub.
+2. Clonar el repositorio creado en la cuenta de GitHub del usuario.
+3. Crear una nueva rama autoria y activarla.
+4. Añadir el nombre del usuario y su correo al fichero
+autores.txt.
+5. Añadir los cambios a la zona de intercambio temporal.
+6. Hacer un commit con el mensaje “Añadido nuevo autor.”
+7. Subir los cambios de la rama autoria al repositorio remoto en
+GitHub.
+8. Hacer un Pull Request de los cambios en la rama autoria.
+
+git clone https://github.com/MChaparroCaballero/libro-git2.git
+git branch autoria
+checkout autoria
+echo. "Maria Chaparro mchaparrocaballeroa706@linkiafp.online" >>autores.txt
+git add .
+git commit -m "añadido nuevo autor"
+git push origin autoria
