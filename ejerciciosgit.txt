@@ -40,7 +40,7 @@ Capítulo 3: Repositorios remotos
 5. Volver a comprobar una vez más el estado del repositorio
 
 EQ4205@DESKTOP-EHS0JB7 MINGW64 ~/git/libro (master)
-$ git status libro
+$ git status 
 On branch master
 
 No commits yet
@@ -77,12 +77,16 @@ Capítulo 2: Flujo de trabajo básico
 Capítulo 3: Gestión de ramas
 Capítulo 4: Repositorios remotos
 
-echo. "Capítulo 3: Gestión de ramas" >> indice.txt
+echo. "Capítulo 1: Introducción a Git
+Capítulo 2: Flujo de trabajo básico
+Capítulo 3: Gestión de ramas
+Capítulo 4: Repositorios remotos" > indice.txt
 
 2. Mostrar los cambios con respecto a la última versión
 guardada en el repositorio.
 git diff
 git add indice.txt
+
 3. Hacer un commit de los cambios con el mensaje “Añadido
 capítulo 3 sobre gestión de ramas”.
 git commit -m "Añadido capítulo 3 sobre gestión de ramas"
