@@ -28,6 +28,9 @@ $ cd libro
 EQ4205@DESKTOP-EHS0JB7 MINGW64 ~/git/libro
 $ git init
 Initialized empty Git repository in C:/Users/EQ4205/git/libro/.git/
+
+git remote add origin https://github.com/MChaparroCaballero/libro2.git
+Git push --set-upstream origin master 
 --------------------------------------------------------------------------------------------------------------------------
 Ejercicio 3
 1. Comprobar el estado del repositorio.
@@ -46,10 +49,7 @@ On branch master
 No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
-[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo > indice.txt
-[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ dir
-indice.txt
-[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo. Capítulo 1: Introducción a Git >> indice.txt
+[EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo. Capítulo 1: Introducción a Git > indice.txt
 [EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo "Capitulo 2: Flujo de Trabajo básico" >> indice.txt
 [EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ echo "Capitulo 3: Repositorios Remotos" >> indice.txt
 [EQ4205@DESKTOP-EHS0JB7 ~/git/libro \ $ git status
@@ -77,10 +77,10 @@ Capítulo 2: Flujo de trabajo básico
 Capítulo 3: Gestión de ramas
 Capítulo 4: Repositorios remotos
 
-echo. "Capítulo 1: Introducción a Git
-Capítulo 2: Flujo de trabajo básico
-Capítulo 3: Gestión de ramas
-Capítulo 4: Repositorios remotos" > indice.txt
+echo. "Capítulo 1: Introducción a Git" >indice.txt
+echo. "Capítulo 2: Flujo de trabajo básico" >>indice.txt
+echo. "Capítulo 3: Gestión de ramas" >>indice.txt
+echo. "Capítulo 4: Repositorios remotos" >> indice.txt
 
 2. Mostrar los cambios con respecto a la última versión
 guardada en el repositorio.
