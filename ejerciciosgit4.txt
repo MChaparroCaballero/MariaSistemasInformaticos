@@ -25,7 +25,7 @@ GitHub.
 mostrando el historial de versiones.
 git add .
 git commit -m "añadiendo cambios"
-git push
+git push -u origin master
 
 Ejercicio 3
 1. Colaborar en el repositorio remoto libro-git de otro usuario.
@@ -38,9 +38,10 @@ usuario y su correo electrónico.
 
 git clone https://github.com/sebascedano/libro-git-1.git
 git remote add upstream
-git branch MariaChaparro
-git checkout MariaChaparro
 echo. "Maria Chaparro mchaparrocaballeroa706@linkiafp.online" > autores.txt
+git add .
+git commit -m "mis cambios"
+git push origin master
 
 Ejercicio 4
 1. Hacer una bifurcación del repositorio remoto
