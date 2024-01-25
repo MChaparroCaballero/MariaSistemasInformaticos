@@ -1,0 +1,87 @@
+module 1
+pag 1: ls
+pag 5:ls
+pag 7:mkdir primates
+pag 8: mv chimps primates
+pag 9:cd primates
+pag 10: pwd
+pag 12: cd ..
+pag 13: mkdir reptiles
+pag 14 (quiz):
+cd
+mv
+mv
+ls
+pwd
+mkdir
+move
+
+module 2
+pag 17: mkdir snakes
+pag 19: cp reptiles/cobras snakes
+pag 20: rm reptiles/cobras
+pag 21: rmdir reptiles
+pag 22: mkdir pachyderms
+pag 27:chmod g+w chimps
+pag 29:
+chmod g+w *
+ls -l
+pag 30: groups
+pag 31 (quiz):
+cp
+rm
+groups
+rmdir
+chmod
+*
+o
+x
+
+module 3
+pag 36:man -k user
+pag 37:man finger
+pag 38:finger greg
+pag 39:cd ~jester
+pag 41:find . -name "joke*
+pag 43:
+cd kids
+cat joke-1 joke-2
+
+pag 45:
+cat joke-1 joke-2 > ~/corny
+cd ~
+pag 47:lpr -P zephyr corny
+pag 49:lpq -P zephyr
+pag 50:
+lprm -P zephyr 737
+lpr -P typhoon corny
+pag 51 (quiz): 
+cat
+man
+lpq
+find
+lprm
+finger
+~
+>
+.
+module 4
+pag 54:cp -r ~bookie/pools ~
+pag 57:df
+pag 58:df .
+pag 59:rm -r pools
+pag 61:ps aux
+pag 64:ps aux | grep rogue
+pag 65: kill 796
+pag 66: ps aux | grep rogue
+pag 67: kill -9 796
+pag 68: ps aux | grep rogue
+pag 69(quiz):
+df
+ps
+aux
+kill
+-9
+grep
+|
+-r
